@@ -1,7 +1,8 @@
 Prepare:
 
-create 'emp', 'personal data'
-put 'emp','1','personal data:name','maikel'
+`create 'emp', 'personal data'`
+
+`put 'emp','1','personal data:name','maikel'`
 
 
 1. Create “conf” directory and copy mapr-clusters.conf from cluster. Set MAPR_HOME to the directory where “conf” folder exists.
