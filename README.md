@@ -1,1 +1,3 @@
-java -cp /opt/mapr/hbase/hbase-1.1.13/conf:hbase-demo2-jar-with-dependencies.jar -Dfs.mapr.bailout.on.library.mismatch=false com.mapr.demos.hbase.Demo
+java -cp <conf-directory>:<jar> <Main Class>
+  EX.
+ java -cp ~/Desktop/mapr/conf/:target/hbase-demo-jar-with-dependencies.jar com.mapr.demos.hbase.Demo
