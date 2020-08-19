@@ -32,6 +32,11 @@
             <version>6.1.0-mapr</version>
         </dependency>
         <dependency>
+            <groupId>com.mapr.fs.native</groupId>
+            <artifactId>mapr-windows-x86_64</artifactId>
+            <version>6.1.0-mapr</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.hbase</groupId>
             <artifactId>hbase-client</artifactId>
             <version>${hbase.version}</version>
