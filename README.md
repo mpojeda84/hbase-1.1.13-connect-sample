@@ -15,3 +15,10 @@ Prepare:
   EX.
   
  `java -cp ~/Desktop/mapr/conf/:target/hbase-demo-jar-with-dependencies.jar com.mapr.demos.hbase.Demo`
+
+
+For Windows download `https://github.com/steveloughran/winutils/tree/master/hadoop-2.7.1` 
+and create an environment variable called HADOOP_HOME=<path to folder containing /bin. AKA: hadoop-2.7.1>
+HADOOP_HOME=C:\Users\Administrator\Desktop\winutils\hadoop-2.7.1
+
+`java -cp "C:\Users\Administrator\Desktop\mapr\conf\*;C:\Users\Administrator\Desktop\hbase-1.1.13-connect-sample\target\hbase-demo-jar-with-dependencies.jar" com.mapr.demos.hbase.Demo`
