@@ -17,7 +17,7 @@ public class Demo {
 
   public void execute() throws IOException {
     Configuration configuration = HBaseConfiguration.create();
-    configuration.addResource("/opt/mapr/hbase/hbase-1.1.13/conf/hbase-site.xml");
+    //configuration.addResource("/opt/mapr/hbase/hbase-1.1.13/conf/hbase-site.xml");
     configuration.set("hbase.zookeeper.quorum", "10.163.169.42,10.163.169.43,10.163.169.44");
     configuration.set("hbase.zookeeper.property.clientPort", "5181");
     configuration.set("mapr.hbase.default.db", "hbase");
