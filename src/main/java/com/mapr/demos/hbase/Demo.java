@@ -17,10 +17,6 @@ public class Demo {
 
   public void execute() throws IOException {
     Configuration configuration = HBaseConfiguration.create();
-    //configuration.addResource("/opt/mapr/hbase/hbase-1.1.13/conf/hbase-site.xml");
-    configuration.set("hbase.zookeeper.quorum", "10.163.169.42,10.163.169.43,10.163.169.44");
-    configuration.set("hbase.zookeeper.property.clientPort", "5181");
-    configuration.set("mapr.hbase.default.db", "hbase");
 
     Connection connection = ConnectionFactory.createConnection(configuration);
     Table table = connection.getTable(TableName.valueOf("emp"));
@@ -29,8 +25,10 @@ public class Demo {
     scan.addColumn(Bytes.toBytes("personal data"), Bytes.toBytes("name"));
     ResultScanner scanner = table.getScanner(scan);
 
-    for (Result result = scanner.next(); result != null; result = scanner.next())
-      System.out.println("Found row : " + result);
+    for (Result result = scanner.next(); result != null; result = scanner.next()) {
+      byte[] valueBytes = result.getValue(Bytes.toBytes("personal data"), Bytes.toBytes("name"));
+      System.out.println("Found row : " + Bytes.toString(valueBytes));
+    }
 
     scanner.close();
     table.close();
