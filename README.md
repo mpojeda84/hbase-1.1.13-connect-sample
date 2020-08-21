@@ -8,6 +8,12 @@ Prepare:
 1. Create “conf” directory and copy mapr-clusters.conf from cluster. Set MAPR_HOME to the directory where “conf” folder exists.
 2. Set MAPR_TICKETFILE_LOCATION to the ticket file copied form the cluster
 3. Copy hbase-site.xml from cluster node to conf directory. 
+
+Make sure hese values exist in the hbase-site.xml
+"hbase.zookeeper.quorum" -> your zookeeper nodes with port. For example: 10.163.169.42:5181,10.163.169.43:5181,10.163.169.44:5181
+"mapr.hbase.default.db" -> hbase
+
+
 4. Run the program:
 
 `java -cp <conf-directory>:<jar> <Main Class>`
