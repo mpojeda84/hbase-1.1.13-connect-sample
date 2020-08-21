@@ -10,7 +10,9 @@ Prepare:
 3. Copy hbase-site.xml from cluster node to conf directory. 
 
 Make sure hese values exist in the hbase-site.xml
+
 "hbase.zookeeper.quorum" -> your zookeeper nodes with port. For example: 10.163.169.42:5181,10.163.169.43:5181,10.163.169.44:5181
+
 "mapr.hbase.default.db" -> hbase
 
 
